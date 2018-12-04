@@ -1,8 +1,9 @@
 module.exports = function(sequelize, DataTypes) {
     const Employee = sequelize.define("Employee", {
-        name: DataTypes.STRING,
-        id: DataTypes.INT
-        
+        username: DataTypes.STRING,
+        password: DataTypes.STRING,
+        id: DataTypes.INT,
+        type: DataTypes.STRING
     });
 
     return Employee;
