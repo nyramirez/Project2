@@ -1,5 +1,5 @@
 -- Drops the database if it exists currently --
-DROP DATABASE IF EXISTS company_db;
+DROP DATABASE IF EXISTS pacer_db;
 
 -- Creates the database --
-CREATE DATABASE company_db;
+CREATE DATABASE pacer_db;
