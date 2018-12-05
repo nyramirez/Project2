@@ -1,19 +1,56 @@
 module.exports = function(sequelize, DataTypes) {
     const Product = sequelize.define("Product", {
-        id: DataTypes.STRING,
-        range: DataTypes.STRING,
-        finish: DataTypes.STRING,
-        quantity: DataTypes.INT,
-        location: DataTypes.STRING,
-        warehouse: DataTypes.STRING,
-        material: DataTypes.STRING,
-        customer_name: DataTypes.STRING,
-        po: DataTypes.INT,
-        so: DataTypes.INT,
-        description: DataTypes.STRING,
-        status: DataTypes.STRING
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+            set(){
+                this.setDataValue('id', `${this.getValue("salesOrder")}-${this.getValue()}`);
+            }
+        },
+        range: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isIn: [["TYPE-2", "TYPE-3"]]
+            }
+        },
+        finish: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isIn: [["P-B", "P-P", "B-B", "PE-PE", "P", "B"]]
+            }
+        },
+        material: {
+            type: DataTypes.STRING,
+            isIn: [["H40", "J55", "K55", "N80-1", "L80"]],
+            allowNull: false
+        },
+        location: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            is: /[A-Z]+\d+$/
+        },
+        warehouse: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            is: /[A-Z]+\d+$/
+        },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        status: {
+            type: DataTypes.STRING,
+            notNull: false,
+            isIn: [["DAMAGED", "GOOD", "WIP", "STORAGE", "TRANSIT"]]
+        }
     });
-
+    Product.associate = function(models){
+        Product.belongsTo(models.SO, {foreignKey: "salesOrder", targetKey: "salesOrder"})
+    };
     return Product;
 };
 
