@@ -4,10 +4,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true,
-            set(){
-                this.setDataValue('id', `${this.getValue("salesOrder")}-${this.getValue()}`);
-            }
+            autoIncrement: true
         },
         range: {
             type: DataTypes.STRING,
