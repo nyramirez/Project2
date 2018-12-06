@@ -1,9 +1,21 @@
 const createError = require('http-errors');
 const express = require('express');
+
+var session = require("express-session");
+var passport = require("./config/passport");
+
+
+
+
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const PORT = process.env.PORT || 3020;
+
+
+const db = require("./models/");
+const sequelize = require("sequelize");
+
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -18,9 +30,13 @@ app.set('view engine', 'hbs');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -43,8 +59,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const db = require("./models/");
-const sequelize = require("sequelize");
 
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
