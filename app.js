@@ -38,6 +38,9 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
+// require("./routes/html-routes.js")(app);
+// require("./routes/api-routes.js")(app);
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/members', membersRouter);
@@ -66,17 +69,17 @@ db.sequelize.sync().then(function() {
   });
 });
 
-db.PO.bulkCreate([{purchaseOrder: 5321, contact:"Barbara", customer: "PAN", status: "WIP"}, {purchaseOrder: 78689, contact: "Paul", customer:"WAMP", status: "DELAYED"}, {purchaseOrder: 73489, contact: "Valinda", customer: "ASN", status: "COMPLETE"}])
-  .then(data => {
-    console.log(data);
-    return db.SO.bulkCreate([{salesOrder: "WAM1123", description: "pipe1", orderQty: 500, status: "WIP", purchaseOrder: 5321}, {salesOrder: "KMAN0832", description: "pipe2", orderQty: 160, status: "WIP", purchaseOrder: 5321}, {salesOrder: "RSTO1709", description: "pipe1", orderQty: 200, status: "COMPLETE", purchaseOrder: 73489}]);
-  })
-  .then(data => {
-    console.log(data);
-    db.Product.bulkCreate([{range: "TYPE-2", finish: "P-P", material: "J55", location: "A55", warehouse: "WH1", description: "pipe1", status: "GOOD", salesOrder: "WAM1123"}, {range: "TYPE-3", finish: "B-B", material: "K55", location: "R22", warehouse: "WH1", description: "pipe1", status: "GOOD", salesOrder: "RSTO1709"}, {range: "TYPE-2", finish: "PE-PE", material: "H40", location: "ZZ14", warehouse: "WH2", description: "pipe3", status: "GOOD", salesOrder: "RSTO1709"}]);
-  })
-  .catch(err => {
-    console.log(err);
-  });
+// db.PO.bulkCreate([{purchaseOrder: 5321, contact:"Barbara", customer: "PAN", status: "WIP"}, {purchaseOrder: 78689, contact: "Paul", customer:"WAMP", status: "DELAYED"}, {purchaseOrder: 73489, contact: "Valinda", customer: "ASN", status: "COMPLETE"}])
+//   .then(data => {
+//     console.log(data);
+//     return db.SO.bulkCreate([{salesOrder: "WAM1123", description: "pipe1", orderQty: 500, status: "WIP", purchaseOrder: 5321}, {salesOrder: "KMAN0832", description: "pipe2", orderQty: 160, status: "WIP", purchaseOrder: 5321}, {salesOrder: "RSTO1709", description: "pipe1", orderQty: 200, status: "COMPLETE", purchaseOrder: 73489}]);
+//   })
+//   .then(data => {
+//     console.log(data);
+//     db.Product.bulkCreate([{range: "TYPE-2", finish: "P-P", material: "J55", location: "A55", warehouse: "WH1", description: "pipe1", status: "GOOD", salesOrder: "WAM1123"}, {range: "TYPE-3", finish: "B-B", material: "K55", location: "R22", warehouse: "WH1", description: "pipe1", status: "GOOD", salesOrder: "RSTO1709"}, {range: "TYPE-2", finish: "PE-PE", material: "H40", location: "ZZ14", warehouse: "WH2", description: "pipe3", status: "GOOD", salesOrder: "RSTO1709"}]);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
 
 module.exports = app;
