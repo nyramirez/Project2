@@ -29,23 +29,23 @@ module.exports = function(app) {
   });
 
   /* GET users listing. */
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
+router.get('/', function(req, res, next) {
+  res.send('respond with a resource');
+});
 
 /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('signup');
-// });
+router.get('/', function(req, res, next) {
+  res.render('signup');
+});
 
 /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('members');
-// });
+router.get('/', function(req, res, next) {
+  res.render('members');
+});
 
 /* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index');
-// });
+router.get('/', function(req, res, next) {
+  res.render('index');
+});
 
 };
