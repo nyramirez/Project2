@@ -2,9 +2,10 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "pacer_db",
+    "database": "passport_demo",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "PORT": 8889
   },
   "test": {
     "username": "root",
