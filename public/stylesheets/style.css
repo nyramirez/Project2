@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   font-family: "Chathura", sans-serif;
   font-size: 20px;
@@ -5,6 +6,11 @@ body {
 
 a {
   color: #00B7FF;
+=======
+form.signup,
+form.login {
+  margin-top: 50px;
+>>>>>>> master
 }
 
 #brandlogo {
