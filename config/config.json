@@ -2,19 +2,23 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "pacer_db",
-    "host": "localhost",
-    "dialect": "mysql"
+    "database": "passport_demo",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "PORT": 8889
   },
   "test": {
     "username": "root",
-    "password": "password",
-    "database": "pacer_db",
+    "password": null,
+    "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   }
 }
