@@ -3,13 +3,13 @@
         "username": "root",
         "password": "password",
         "database": "pacer_db",
-        "host": "127.0.0.1",
+        "host": "localhost",
         "dialect": "mysql",
         "PORT": 3306
     },
     "test": {
         "username": "root",
-        "password": "password",
+        "password": null,
         "database": "pacer_db",
         "host": "localhost",
         "dialect": "mysql"
