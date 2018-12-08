@@ -32,16 +32,16 @@ module.exports = function(app) {
         console.log(req.body);
         db.User.create({
             email: req.body.email,
-            password: req.body.password
+            password: req.body.password,
+            employeeType: req.body.employeeType
         })
             .then(function() {
                 res.redirect(307, "/api/login");
-                // res.redirect(201, "/manager/signup/success");
             })
             .catch(function(err) {
                 console.log(err);
-                res.json(err);
-                // res.status(422).json(err.errors[0].message);
+                // res.json(err);
+                res.status(422).json(err.errors[0].message);
             });
     });
 
