@@ -24,7 +24,7 @@ module.exports = function(app) {
             password: req.body.password
         })
             .then(function() {
-                res.redirect(201, "/success");
+                res.redirect(201, "/manager/signup/success");
             })
             .catch(function(err) {
                 console.log(err);
