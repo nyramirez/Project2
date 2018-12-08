@@ -10,13 +10,24 @@ module.exports = function(app) {
         // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
         // So we're sending the user back the route to the members page because the redirect will happen on the front end
         // They won't get this or even be able to access this page if they aren't authed
-        console.log(req.body);
-        res.json("/members");
+        let = req.user.dataValues;
+        console.log(realUser);
+        switch(realUser.employeeType){
+            case "Manager":
+                res.json("members");
+                break;
+            case "Clerk":
+                res.redirect("officeclerk.handlebars");
+                break;
+            case "Forklift":
+                res.redirect("groundops.handlebars");
+                break;
+        };
     });
 
     // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
     // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
-    // otherwise send back an error
+    // otherwise send back an errord
     app.post("/api/signup", function(req, res) {
         console.log(req.body);
         db.User.create({
@@ -24,7 +35,8 @@ module.exports = function(app) {
             password: req.body.password
         })
             .then(function() {
-                res.redirect(201, "/manager/signup/success");
+                res.redirect(307, "/api/login");
+                // res.redirect(201, "/manager/signup/success");
             })
             .catch(function(err) {
                 console.log(err);
