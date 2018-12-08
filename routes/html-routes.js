@@ -28,11 +28,19 @@ module.exports = function(app) {
     });
 
     app.get("/manager", function(req, res) {
-        res.render("member.handlebars");
+        res.render("members");
     });
 
     app.get("/manager/signup/success", function(req, res) {
         console.log("trying to render success.handlebars");
         res.render("success.handlebars");
+    });
+
+    app.get("/clerk", function(req, res) {
+        res.render("officeclerk");
+    });
+
+    app.get("/forklift", function(req, res) {
+        res.render("groundops");
     });
 };
