@@ -1,23 +1,33 @@
 {
-  "name": "project2",
-  "version": "0.0.0",
-  "private": true,
+  "name": "1-Passport-Example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server.js",
+    "lint": "eslint **/*.js --quiet",
+    "fix": "eslint --fix .",
+    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.2",
-    "body-parser": "^1.18.3",
-    "cookie-parser": "^1.4.3",
-    "debug": "~2.6.9",
+    "bcrypt-nodejs": "0.0.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "dotenv": "^6.2.0",
     "eslint": "^5.9.0",
-    "express": "~4.16.0",
-    "hbs": "~4.0.1",
-    "http-errors": "~1.6.2",
-    "morgan": "~1.9.0",
-    "mysql": "^2.16.0",
-    "mysql2": "^1.6.4",
-    "pg": "^7.7.1",
-    "sequelize": "^4.41.2"
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.2",
+    "mocha": "^5.2.0",
+    "mysql2": "^1.3.6",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "prettier": "^1.15.3",
+    "sequelize": "^4.3.1"
   }
 }
