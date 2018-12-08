@@ -2,3 +2,12 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+label {
+  font-size: 1.5rem;
+}
+
+#instruction {
+  font-size: 1.0rem;
+  font-style: italic;
+}
