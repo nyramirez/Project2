@@ -14,11 +14,30 @@ module.exports = function(app) {
     });
 
     app.get("/signup", function(req, res) {
-        // If the user already has an account send them to the members page
+        // If the user is logged in check employeetype
         if (req.user) {
-            res.redirect("/members");
+            let type = req.user.employeeType;
+            if (type === "Manager" || type === "HR") {
+                res.render("signup");
+            } else {
+                let page;
+                switch (type) {
+                    case "Forklift":
+                        page = "forklift";
+                        break;
+                    case "Clerk":
+                        page = "clerk";
+                        break;
+                }
+                setTimeout(function() {
+                    console.log(`${page} being redirected to correct page`);
+                    res.redirect(`/${page}`);
+                }, 3000);
+                console.log(
+                    "You are not authorized to use this page. You will be redirected in 3 seconds."
+                );
+            }
         }
-        res.render("signup");
     });
 
     // Here we've add our isAuthenticated middleware to this route.
@@ -31,7 +50,7 @@ module.exports = function(app) {
         res.render("members");
     });
 
-    app.get("/manager/signup/success", function(req, res) {
+    app.get("/success", function(req, res) {
         console.log("trying to render success.handlebars");
         res.render("success.handlebars");
     });

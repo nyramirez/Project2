@@ -1,2 +1,4 @@
 models/index.js
 node_modules
+config/passport.js
+config/middleware/isAuthenticated.js

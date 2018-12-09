@@ -36,12 +36,13 @@ module.exports = function(app) {
             employeeType: req.body.employeeType
         })
             .then(function() {
-                res.redirect(307, "/api/login");
+                res.redirect(201, "/success");
             })
             .catch(function(err) {
                 console.log(err);
-                res.json(err);
-                // res.status(422).json(err.errors[0].message);
+                // res.json(err);
+                res.status(422).json(err.errors[0].message);
+
             });
     });
 
@@ -57,11 +58,12 @@ module.exports = function(app) {
             // The user is not logged in, send back an empty object
             res.json({});
         } else {
-            // Otherwise send back the user's email and id
+            // Otherwise send back the user's email and id and employeeType
             // Sending back a password, even a hashed password, isn't a good idea
             res.json({
                 email: req.user.email,
-                id: req.user.id
+                id: req.user.id,
+                employeeType: req.user.employeeType
             });
         }
     });

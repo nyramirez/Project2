@@ -33,7 +33,8 @@ $(document).ready(function() {
             employeeType: employeeType
         })
             .then(function(data) {
-                window.location.replace(data);
+                console.log(`This is the /api/signup post data: ${data}`);
+                window.location.replace("/success");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
             .catch(handleLoginErr);
