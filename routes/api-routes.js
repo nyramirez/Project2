@@ -17,10 +17,10 @@ module.exports = function(app) {
                 res.json("members");
                 break;
             case "Clerk":
-                res.redirect("officeclerk");
+                res.json("officeclerk");
                 break;
             case "Forklift":
-                res.redirect("groundops");
+                res.json("groundops");
                 break;
         };
     });
