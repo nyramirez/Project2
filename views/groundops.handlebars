@@ -14,24 +14,26 @@
 
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">Ground Operations</h1>
-          <p class="lead">Insert information about the batch.</p>
+          <h1 class="display-4">Welcome <span class="member-name"></span></h1>
+          <p class="lead">Ground Operations Page</p>
         </div>
       </div>
 
+{{!-- Table for adding new product information --}}
     <div class="container">
+      <h2>Insert new batch information</h2>
       <form>
             <div class="form-group">
-              <label for="exampleFormControlInput1">Quantity</label>
-              <input type="" class="form-control" id="exampleFormControlInput1" placeholder="Number in Batch">
+              <label for="quantityInput">Quantity</label>
+              <input type="" class="form-control" id="quantity" placeholder="Number in Batch">
             </div>
             <div class="form-group">
-                    <label for="exampleFormControlInput1">Location</label>
-                    <input type="" class="form-control" id="exampleFormControlInput1" placeholder="Location in Warehouse">
+                    <label for="locationInput">Location</label>
+                    <input type="" class="form-control" id="location" placeholder="Location in Warehouse">
             </div>
             <div class="form-group">
-              <label for="exampleFormControlSelect1">Range</label>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <label for="rangeInput">Range</label>
+              <select class="form-control" id="range">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -40,8 +42,8 @@
               </select>
             </div>
             <div class="form-group">
-                    <label for="exampleFormControlSelect1">Finish</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="finishInput">Finish</label>
+                    <select class="form-control" id="finish">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -50,8 +52,8 @@
                     </select>
             </div>
             <div class="form-group">
-                    <label for="exampleFormControlSelect1">Material</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
+                    <label for="materialInput">Material</label>
+                    <select class="form-control" id="material">
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
