@@ -31,7 +31,7 @@ module.exports = function(app) {
         res.render("members");
     });
 
-    app.get("/manager/signup/success", function(req, res) {
+    app.get("/success", function(req, res) {
         console.log("trying to render success.handlebars");
         res.render("success.handlebars");
     });
