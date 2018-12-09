@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         customer: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: false
         },
         status: {
             type: DataTypes.STRING,
@@ -21,7 +21,10 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
     PO.associate = function(models){
-        PO.hasMany(models.SO, {foreignKey: 'purchaseOrder', sourceKey: 'purchaseOrder'});
+        PO.hasMany(models.SO, {
+            foreignKey: "purchaseOrder",
+            sourceKey: "purchaseOrder"
+        });
     };
     return PO;
 };

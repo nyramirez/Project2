@@ -36,11 +36,11 @@ module.exports = function(app) {
         res.render("success.handlebars");
     });
 
-    app.get("/clerk", function(req, res) {
+    app.get("/officeclerk", function(req, res) {
         res.render("officeclerk");
     });
 
-    app.get("/forklift", function(req, res) {
+    app.get("/groundops", function(req, res) {
         res.render("groundops");
     });
 };

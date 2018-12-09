@@ -20,7 +20,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         employeeType: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: false
             // validate: {
             //     isIN: [["Manager", "Clerk", "Forklift"]]
             // }

@@ -3,3 +3,6 @@ DROP DATABASE IF EXISTS pacer_db;
 
 -- Creates the database --
 CREATE DATABASE pacer_db;
+
+-- Use the database --
+USE pacer_db;
