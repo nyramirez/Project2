@@ -31,7 +31,7 @@ module.exports = function(app) {
     app.post("/api/signup", function(req, res) {
         console.log(req.body);
         db.User.create({
-            email: req.body.email,
+            username: req.body.username,
             password: req.body.password,
             employeeType: req.body.employeeType
         })
@@ -42,7 +42,6 @@ module.exports = function(app) {
                 console.log(err);
                 // res.json(err);
                 res.status(422).json(err.errors[0].message);
-
             });
     });
 
@@ -61,7 +60,7 @@ module.exports = function(app) {
             // Otherwise send back the user's email and id and employeeType
             // Sending back a password, even a hashed password, isn't a good idea
             res.json({
-                email: req.user.email,
+                username: req.user.username,
                 id: req.user.id,
                 employeeType: req.user.employeeType
             });
