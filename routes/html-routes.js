@@ -15,11 +15,11 @@ module.exports = function(app) {
 
     app.get("/signup", function(req, res) {
         // If the user is logged in check employeetype
-        if (req.user) {
+        /*if (req.user) {
             let type = req.user.employeeType;
-            if (type === "Manager" || type === "HR") {
+            if (type === "Manager" || type === "HR") {*/
                 res.render("signup");
-            } else {
+            /*} else {
                 let page;
                 switch (type) {
                     case "Forklift":
@@ -37,7 +37,7 @@ module.exports = function(app) {
                     "You are not authorized to use this page. You will be redirected in 3 seconds."
                 );
             }
-        }
+        }*/
     });
 
     // Here we've add our isAuthenticated middleware to this route.
@@ -55,11 +55,11 @@ module.exports = function(app) {
         res.render("success.handlebars");
     });
 
-    app.get("/officeclerk", function(req, res) {
+    app.get("/clerk", function(req, res) {
         res.render("officeclerk");
     });
 
-    app.get("/groundops", function(req, res) {
+    app.get("/forklift", function(req, res) {
         res.render("groundops");
     });
 };
