@@ -1,51 +1,52 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">PACER TMS</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
+<nav class="navbar">
+  <span class="navbar-brand navbar-expand-lg" id="logo">PACER TMS</span>
+  {{!-- <div class="collapse navbar-collapse" id="navbarNav"> --}}
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" class="form-control mr-sm-2" href="/">Logout <span class="sr-only">(current)</span></a>
+        <a class="nav-link mr-sm-2 font-weight-bold" href="/">Logout<span class="sr-only">(current)</span></a>
       </li>
     </ul>
-  </div>
+  {{!-- </div> --}}
 </nav>
-<div class="jumbotron jumbotron-fluid">
-  <div class="container text-center">
-    <h1 class="display-4">Welcome <span class="member-name"></span></h1>
-    <p class="lead">Office Clerk Page</p>
-  </div>
+
+<div class="jumbotron jumbotron-fluid text-center">
+  <h1 class="display-4">Welcome <span class="member-name"></span></h1>
+  <hr>
+  <p class="lead">Office Clerk Page</p>
 </div>
 
-<div class="container col-md-6 offset-md-3">
+<div class="container col-md-6">
+  <h2 class="text-center">New batches received</h2>
   {{!-- This table shows previously input information from ground ops --}}
-  <table class="table table-center table-hover text-center">
+  <table class="table table-center table-sm table-hover text-center">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">Range</th>
+        <th scope="col">Material</th>
         <th scope="col">Finish</th>
+        <th scope="col">Range</th>
         <th scope="col">Quantity</th>
         <th scope="col">Location</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th scope="row">Type 1</th>
-        <td>B-B</td>
+        <th scope="row">H40</th>
+        <td>P-B</td>
+        <td>TYPE-2</td>
         <td>70</td>
         <td>B2</td>
       </tr>
       <tr>
-        <th scope="row">Type 2</th>
+        <th scope="row">N80-1</th>
         <td>P-C</td>
+        <td>TYPE-2</td>
         <td>80</td>
         <td>B3</td>
       </tr>
       <tr>
-        <th scope="row">Type 3</th>
-        <td>P-B</td>
+        <th scope="row">L80</th>
+        <td>B</td>
+        <td>TYPE-3</td>
         <td>80</td>
         <td>B2</td>
       </tr>
@@ -53,64 +54,84 @@
   </table>
 </div>
 <br>
-<br>
 {{!-- This form adds more information to previous --}}
-<div class="container col-md-6 offset-md-3">
-    <h2 class="text-center">Update specifics from ground operations</h2>
-    <div class="form-group">
-      <label for="warehouseInput">Warehouse</label>
-      <select class="form-control" id="warehouse">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+<div class="container col-md-6">
+  <form>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="warehouseInput">Warehouse</label>
+        <select class="form-control" id="warehouse">
+          <option selected>Select Warehouse</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      {{!-- <div class="form-group col-md-4">
+        <label for="matGradeInput">Material Grade</label>
+        <select class="form-control" id="materialGrade">
+          <option selected>Select grade of material</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div> --}}
+      <div class="form-group col-md-6">
+        <label for="matGradeInput">Status</label>
+        <select class="form-control" id="status">
+          <option selected>Select status</option>
+          <option>Damaged</option>
+          <option>Good</option>
+          <option>WIP</option>
+          <option>Storage</option>
+          <option>Transit</option>
+        </select>
+      </div>
     </div>
-    <div class="form-group">
-      <label for="matGradeInput">Material Grade</label>
-      <select class="form-control" id="materialGrade">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
-  </div>
-  <div class="container col-md-6 offset-md-3">
-    <div class="form-group">
-      <label for="customerNameInpput">Customer Name</label>
-      <input type="text" class="form-control" id="customerName" placeholder="Enter Customer Name">
-    </div>
-    <div class="form-group">
-      <label for="salesOrderInput">SO#</label>
-      <input type="text" class="form-control" id="salesoOrder" placeholder="Enter Number">
-    </div>
-    <div class="form-group">
-      <label for="purchaseOrderInput">PO#</label>
-      <input type="text" class="form-control" id="purchaseOrder" placeholder="Enter Number Here">
-    </div>
+
     <div class="form-group">
       <label for="descipInput">Description</label>
       <input type="text" class="form-control" id="description" placeholder="Enter Product Description Here">
     </div>
-    <div class="form-group">
-      <label for="lengthInput">Pipe Batch Total Length</label>
-      <input type="text" class="form-control" id="totalLength" placeholder="Enter Number Here">
-    </div>
-  </div>
 
-{{!-- Submits information to the inventory database --}}
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <button class="btn btn-success">Submit</button>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="purchaseOrderInput">PO#</label>
+        <input type="text" class="form-control" id="purchaseOrder" placeholder="Enter Number Here">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="salesOrderInput">SO#</label>
+        <input type="text" class="form-control" id="salesoOrder" placeholder="Enter Number">
       </div>
     </div>
-  </div>
 
-  <!--Footer-->
-  <footer class="page-footer font-small">
-    <div class="footer-copyright text-center py-3">© 2018 Copyright: PACER TMS</div>
-  </footer>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="customerNameInpput">Customer Name</label>
+        <input type="text" class="form-control" id="customerName" placeholder="Enter Customer Name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="lengthInput">Contact Number</label>
+        <input type="text" class="form-control" id="contactNum" placeholder="Enter Number Here">
+      </div>
+    </div>
+  </form>
+</div>
+
+{{!-- Submits information to the inventory database --}}
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12 text-center">
+      <button class="btn btn-success btn-outline-dark">Submit</button>
+    </div>
+  </div>
+</div>
+
+<!--Footer-->
+<footer class="page-footer font-small">
+  <div class="footer-copyright text-center py-3">© 2018 Copyright: PACER TMS</div>
+</footer>

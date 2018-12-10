@@ -1,17 +1,33 @@
-form.signup,
-form.login {
-  margin-top: 50px;
-}
-
-h2 {
-  font-family: "Orienta", sans-serif;
+.signup, .login {
+  margin-top: 150px;
 }
 
 label {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
 }
 
 #instruction {
   font-size: 1.0rem;
   font-style: italic;
+}
+
+body, .navbar {
+  background-image: url(../blurbackground.jpg)
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+.jumbotron, footer{
+  background: none;
+}
+
+a, a:hover {
+  color: #A54657;
+}
+
+#logo {
+  font-family: "Faster One", cursive;
+  font-size: 2rem;
 }
