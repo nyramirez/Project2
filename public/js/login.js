@@ -11,9 +11,7 @@ $(document).ready(function() {
             username: usernameInput.val().trim(),
             password: passwordInput.val().trim()
         };
-        console.log(userData);
         if (!userData.username || !userData.password) {
-            console.log("no username or no password entered");
             return;
         }
 
@@ -25,8 +23,6 @@ $(document).ready(function() {
 
     // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
     function loginUser(username, password) {
-        console.log("inside loginUser function");
-        console.log(`username: ${username}; password: ${password}`);
         $.post(
             "/api/login",
             {
@@ -34,7 +30,6 @@ $(document).ready(function() {
                 password: password
             },
             function(employee) {
-                console.log("in the .then function of loginUser");
                 switch (employee.employeeType) {
                     case "Manager":
                         window.location.replace("/manager");

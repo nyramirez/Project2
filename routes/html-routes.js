@@ -51,7 +51,6 @@ module.exports = function(app) {
     });
 
     app.get("/success", function(req, res) {
-        console.log("trying to render success.handlebars");
         res.render("success.handlebars");
     });
 
