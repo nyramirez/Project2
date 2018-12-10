@@ -11,7 +11,6 @@ $(document).ready(function() {
             username: usernameInput.val().trim(),
             password: passwordInput.val().trim()
         };
-
         if (!userData.username || !userData.password) {
             return;
         }
@@ -24,27 +23,28 @@ $(document).ready(function() {
 
     // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
     function loginUser(username, password) {
-        $.post("/api/login", {
-            username: username,
-            password: password
-        })
-            .then(function(employee) {
+        $.post(
+            "/api/login",
+            {
+                username: username,
+                password: password
+            },
+            function(employee) {
                 switch (employee.employeeType) {
-                case "Manager":
-                    window.location.replace("/manager");
-                    break;
-                case "Clerk":
-                    window.location.replace("/clerk");
-                    break;
-                case "Forklift":
-                    window.location.replace("/forklift");;
-                    break;
+                    case "Manager":
+                        window.location.replace("/manager");
+                        break;
+                    case "Clerk":
+                        window.location.replace("/clerk");
+                        break;
+                     case "Forklift":
+                        window.location.replace("/forklift");;
+                        break;
                 }
-            // window.location.replace("/api/login");
-            // If there's an error, log the error
-            })
-            .catch(function(err) {
-                console.log(err);
-            });
+            },
+            "json"
+        ).catch(function(err) {
+            console.log(err);
+        });
     }
 });

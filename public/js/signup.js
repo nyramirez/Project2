@@ -14,12 +14,16 @@ $(document).ready(function() {
             employeeType: employeeType.val().trim()
         };
 
-        if (!userData.username || !userData.password || !userData.employeeType) {
+        if (
+            !userData.username ||
+            !userData.password ||
+            !userData.employeeType
+        ) {
             return;
         }
         // If we have an email and password, run the signUpUser function
         signUpUser(userData.username, userData.password, userData.employeeType);
-        emailInput.val("");
+        usernameInput.val("");
         passwordInput.val("");
         employeeType.val("");
     });
@@ -32,8 +36,7 @@ $(document).ready(function() {
             password: password,
             employeeType: employeeType
         })
-            .then(function(data) {
-                console.log(`This is the /api/signup post data: ${data}`);
+            .then(function() {
                 window.location.replace("/success");
                 // If there's an error, handle it by throwing up a bootstrap alert
             })
