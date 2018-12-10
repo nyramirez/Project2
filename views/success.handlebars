@@ -1,3 +1,19 @@
-<h1>Success</h1>
-<p>You've successfully created a new user.</p>
-<p>Go back to <a href="/manager">manager's page</a></p>
+<nav class="navbar">
+  <span class="navbar-brand navbar-expand-lg" id="logo">PACER TMS</span>
+  {{!-- <div class="collapse navbar-collapse" id="navbarNav"> --}}
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link mr-sm-2 font-weight-bold" href="/login">Logout<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  {{!-- </div> --}}
+</nav>
+
+<div class="jumbotron jumbotron-fluid text-center">
+  <h1 class="display-4">Success<span class="success"></span></h1>
+  <hr>
+  <p class="lead">You've successfully added a new employee</p>
+  <br>
+  <p>Go back to <a href="/manager">manager's page</a> or <a href="/">logout.</a></p>
+</div>
+
