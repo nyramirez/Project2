@@ -9,12 +9,13 @@ $(document).ready(function() {
     // When the signup button is clicked, we validate the email and password are not blank
 
     groundOpsForm.on("submit", function(event) {
+        console.log("groundOps on submit");
         event.preventDefault();
         let forkliftData = {
             products: {
-                range: pipeRange,
-                finish: finishKind,
-                location: location,
+                range: pipeRange.val().toUpperCase(),
+                finish: finishKind.val().toUpperCase(),
+                location: location.val().toUpperCase(),
                 warehouse: "",
                 description: "",
                 status: ""
@@ -23,7 +24,7 @@ $(document).ready(function() {
                 salesOrder: "",
                 desription: "",
                 material: "",
-                orderQty: batchQty
+                orderQty: batchQty.val()
             },
             po: {
                 purchaseOrder: "",
@@ -38,6 +39,7 @@ $(document).ready(function() {
             !forkliftData.products.location ||
             !forkliftData.so.orderQty
         ) {
+            console.log("you forgot to fill out one of the fields");
             return;
         }
         // If we have an email and password, run the signUpUser function
@@ -51,21 +53,34 @@ $(document).ready(function() {
 
     // Does a post to the signup route. If successful, we are redirected to the members page
     // Otherwise we log any errors
-    function signUpUser(username, password, employeeType) {
-        $.post("/api/signup", {
-            username: username,
-            password: password,
-            employeeType: employeeType
-        })
-            .then(function() {
-                window.location.replace("/success");
-                // If there's an error, handle it by throwing up a bootstrap alert
+    function sendData(data) {
+        console.log("inside sendata function");
+        console.log(data);
+        $.ajax({
+            method: "PUT",
+            url: "/api/batches",
+            data: data,
+            dataType: "json",
+            success: function(message) {
+                console.log(`${JSON.stringify(message.success)}`);
+            },
+            error: function(err) {
+                console.log(
+                    `There was an error with the ajax POST: ${JSON.stringify(
+                        err.error
+                    )}`
+                );
+            },
+            complete: function() {
+                console.log("batches.json successfully updated");
+            }
+        });
+        /*$.post("/api/batches", data)
+            .then(function(message) {
+                console.log(message);
             })
-            .catch(handleLoginErr);
+            .catch(function(err) {
+                console.log(err);
+            });*/
     }
-
-    function handleLoginErr(err) {
-        $("#alert .msg").text(err.responseJSON);
-        $("#alert").fadeIn(500);
-    }
-    });
+});

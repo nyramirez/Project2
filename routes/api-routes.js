@@ -1,6 +1,8 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const fs = require("fs");
+let batches = require("../public/batches.json");
 
 module.exports = function(app) {
     // Using the passport.authenticate middleware with our local strategy.
@@ -10,10 +12,8 @@ module.exports = function(app) {
         // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
         // So we're sending the user back the route to the members page because the redirect will happen on the front end
         // They won't get this or even be able to access this page if they aren't authed
-        console.log("inside app.post for /api/login");
-        console.log(`this is the req: ${req}`);
         let employee = req.user.dataValues;
-        console.log(employee);
+        // console.log(employee);
         res.json(employee);
     });
 
@@ -35,6 +35,27 @@ module.exports = function(app) {
                 // res.json(err);
                 res.status(422).json(err.errors[0].message);
             });
+    });
+
+    app.put("/api/batches", function(req, res) {
+        batches.push(req.body);
+        fs.writeFile(
+            "public/batches.json",
+            JSON.stringify(batches),
+            "utf-8",
+            function(err) {
+                if (err) {
+                    return res.status(500).send({
+                        error:
+                            "Something went wrong trying to save the information submitted. Please try again later."
+                    });
+                }
+                console.log("batches.json updated");
+                res.status(201).send({
+                    success: "Form successfully submited."
+                });
+            }
+        );
     });
 
     // Route for logging user out
