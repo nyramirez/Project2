@@ -1,7 +1,7 @@
 {
     "development": {
         "username": "root",
-        "password": "",
+        "password": "password",
         "database": "pacer_db",
         "host": "localhost",
         "dialect": "mysql",
@@ -9,7 +9,7 @@
     },
     "test": {
         "username": "root",
-        "password": null,
+        "password": "password",
         "database": "pacer_db",
         "host": "localhost",
         "dialect": "mysql"
@@ -18,7 +18,7 @@
         "username": "root",
         "password": "password",
         "database": "pacer_db",
-        "host": "127.0.0.1",
+        "host": "localhost",
         "dialect": "mysql"
     }
 }

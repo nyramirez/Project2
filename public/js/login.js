@@ -38,7 +38,7 @@ $(document).ready(function() {
                         window.location.replace("/clerk");
                         break;
                      case "Forklift":
-                        window.location.replace("/forklift");;
+                        window.location.replace("/forklift");
                         break;
                 }
             },
