@@ -16,11 +16,11 @@ $(document).ready(function() {
         let officeClerkData = {
             warehouse: warehouseInput.val(),
             status: statusInput.val(),
-            description: description.val(),
-            purchaseOrder: purchaseOrder.val(),
-            salesOrder: salesOrder.val(),
-            customerName: customerName.val(),
-            contactNum: contactNum.val()
+            description: description.val().trim(),
+            purchaseOrder: purchaseOrder.val().toUpperCase(),
+            salesOrder: salesOrder.val().trim().toUpperCase(),
+            customerName: customerName.val().trim().toUpperCase(),
+            contactNum: contactNum.val().trim().toUpperCase()
         };
 
         postOffice(
