@@ -20,20 +20,19 @@ module.exports = function(sequelize, DataTypes) {
                 isIn: [["P-B", "P-P", "B-B", "PE-PE", "P", "B"]]
             }
         },
-        material: {
-            type: DataTypes.STRING,
-            isIn: [["H40", "J55", "K55", "N80-1", "L80"]],
-            allowNull: false
-        },
         location: {
             type: DataTypes.STRING,
             allowNull: false,
-            is: /[A-Z]+\d+$/
+            validate: {
+                isIn: [["A1", "A2", "A3", "A4", "A5", "A6", "TRANSIT"]]
+            }
         },
         warehouse: {
             type: DataTypes.STRING,
             allowNull: false,
-            is: /[A-Z]+\d+$/
+            validate: {
+                is: /[A-Z]+\d+$/
+            }
         },
         description: {
             type: DataTypes.STRING,
@@ -42,12 +41,16 @@ module.exports = function(sequelize, DataTypes) {
         status: {
             type: DataTypes.STRING,
             notNull: false,
-            isIn: [["DAMAGED", "GOOD", "WIP", "STORAGE", "TRANSIT"]]
+            validate: {
+                isIn: [["DAMAGED", "GOOD", "QC-INSPECT"]]
+            }
         }
     });
-    Product.associate = function(models){
-        Product.belongsTo(models.SO, {foreignKey: "salesOrder", targetKey: "salesOrder"})
+    Product.associate = function(models) {
+        Product.belongsTo(models.SO, {
+            foreignKey: "salesOrder",
+            targetKey: "salesOrder"
+        });
     };
     return Product;
 };
-

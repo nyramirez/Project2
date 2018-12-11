@@ -1,34 +1,52 @@
 $(document).ready(function() {
     // Getting references to our form and input
     const groundOpsForm = $("form.groundops");
-    const materialClass = $("select#material");
     const finishKind = $("select#finish");
     const pipeRange = $("select#range");
     const batchQty = $("input#quantity");
-    const location = $("select#location")
+    const location = $("select#location");
 
     // When the signup button is clicked, we validate the email and password are not blank
 
-    signUpForm.on("submit", function(event) {
+    groundOpsForm.on("submit", function(event) {
         event.preventDefault();
-        let userData = {
-            username: usernameInput.val().trim(),
-            password: passwordInput.val().trim(),
-            employeeType: employeeType.val().trim()
+        let forkliftData = {
+            products: {
+                range: pipeRange,
+                finish: finishKind,
+                location: location,
+                warehouse: "",
+                description: "",
+                status: ""
+            },
+            so: {
+                salesOrder: "",
+                desription: "",
+                material: "",
+                orderQty: batchQty
+            },
+            po: {
+                purchaseOrder: "",
+                contact: "",
+                customer: ""
+            }
         };
 
         if (
-            !userData.username ||
-            !userData.password ||
-            !userData.employeeType
+            !forkliftData.products.range ||
+            !forkliftData.products.finish ||
+            !forkliftData.products.location ||
+            !forkliftData.so.orderQty
         ) {
             return;
         }
         // If we have an email and password, run the signUpUser function
-        signUpUser(userData.username, userData.password, userData.employeeType);
-        usernameInput.val("");
-        passwordInput.val("");
-        employeeType.val("");
+        sendData(forkliftData);
+        groundOpsForm.val("");
+        finishKind.val("");
+        pipeRange.val("");
+        batchQty.val("");
+        location.val("");
     });
 
     // Does a post to the signup route. If successful, we are redirected to the members page

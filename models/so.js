@@ -9,6 +9,13 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
+        material: {
+            type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isIn: [["H40", "J55", "K55", "N80-1", "L80"]]
+            }
+        },
         orderQty: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -16,17 +23,13 @@ module.exports = function(sequelize, DataTypes) {
                 min: 1,
                 isInt: true
             }
-        },
-        status: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            isIn: [["WIP", "DELAYED", "COMPLETE", "TRANSIT"]]
         }
-        
     });
-    SO.associate = function(models){
-        
-        SO.belongsTo(models.PO, {foreignKey: "purchaseOrder", targetKey: "purchaseOrder"});
+    SO.associate = function(models) {
+        SO.belongsTo(models.PO, {
+            foreignKey: "purchaseOrder",
+            targetKey: "purchaseOrder"
+        });
         // SO.hasMany(models.Product, {foreignKey: "id", sourceKey: "id"});
     };
     return SO;
