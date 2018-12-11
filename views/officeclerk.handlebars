@@ -26,6 +26,7 @@
         <th scope="col">Range</th>
         <th scope="col">Quantity</th>
         <th scope="col">Location</th>
+        <th scope="col">Status</th>
       </tr>
     </thead>
     <tbody>
@@ -35,6 +36,7 @@
         <td>TYPE-2</td>
         <td>70</td>
         <td>B2</td>
+        <td>Good</td>
       </tr>
       <tr>
         <th scope="row">N80-1</th>
@@ -42,6 +44,7 @@
         <td>TYPE-2</td>
         <td>80</td>
         <td>B3</td>
+        <td>Good</td>
       </tr>
       <tr>
         <th scope="row">L80</th>
@@ -49,6 +52,7 @@
         <td>TYPE-3</td>
         <td>80</td>
         <td>B2</td>
+        <td>QC-Inspect</td>
       </tr>
     </tbody>
   </table>
@@ -69,26 +73,15 @@
           <option>5</option>
         </select>
       </div>
-      {{!-- <div class="form-group col-md-4">
+      <div class="form-group col-md-6">
         <label for="matGradeInput">Material Grade</label>
         <select class="form-control" id="materialGrade">
           <option selected>Select grade of material</option>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div> --}}
-      <div class="form-group col-md-6">
-        <label for="matGradeInput">Status</label>
-        <select class="form-control" id="status">
-          <option selected>Select status</option>
-          <option>Damaged</option>
-          <option>Good</option>
-          <option>WIP</option>
-          <option>Storage</option>
-          <option>Transit</option>
+          <option>H40</option>
+          <option>J55</option>
+          <option>K55</option>
+          <option>N80-1</option>
+          <option>L80</option>
         </select>
       </div>
     </div>
