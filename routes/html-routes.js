@@ -46,19 +46,19 @@ module.exports = function(app) {
         res.render("members");
     });
 
-    app.get("/manager", function(req, res) {
+    app.get("/manager", isAuthenticated, function(req, res) {
         res.render("members");
     });
 
-    app.get("/success", function(req, res) {
+    app.get("/success", isAuthenticated, function(req, res) {
         res.render("success.handlebars");
     });
 
-    app.get("/clerk", function(req, res) {
+    app.get("/clerk", isAuthenticated, function(req, res) {
         res.render("officeclerk");
     });
 
-    app.get("/forklift", function(req, res) {
+    app.get("/forklift", isAuthenticated, function(req, res) {
         res.render("groundops");
     });
 };
