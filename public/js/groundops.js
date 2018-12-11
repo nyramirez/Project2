@@ -5,7 +5,7 @@ $(document).ready(function() {
     const finishKind = $("select#finish");
     const pipeRange = $("select#range");
     const batchQty = $("input#quantity");
-    const location = $("select#location")
+    const location = $("select#location");
 
     // When the signup button is clicked, we validate the email and password are not blank
 
