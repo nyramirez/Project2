@@ -59,3 +59,65 @@ module.exports = function(app) {
         }
     });
 };
+
+app.post("/api/office", function(req, res) {
+    console.log(req.body);
+    db.PO.create({
+        purchaseOrder: req.body.purchaseOrder,
+        contact: req.body.contact,
+        customer: req.body.customer,
+        status: req.body.status
+    }).catch(function(err) {
+        console.log(err);
+        // res.json(err);
+        res.status(422).json(err.errors[0].message);
+    });
+});
+
+app.post("/api/office", function(req, res) {
+    console.log(req.body);
+    db.PO.create({
+        purchaseOrder: req.body.purchaseOrder,
+        contact: req.body.contact,
+        customer: req.body.customer,
+        status: req.body.status
+    }).catch(function(err) {
+        console.log(err);
+        // res.json(err);
+        res.status(422).json(err.errors[0].message);
+    });
+});
+
+app.post("/api/office", function(req, res) {
+    console.log(req.body);
+    db.SO.create({
+        salesOrder: req.body.salesOrder,
+        description: req.body.description,
+        orderQty: req.body.orderQty,
+        status: req.body.status
+    });
+    }).catch(function(err) {
+        console.log(err);
+        // res.json(err);
+        res.status(422).json(err.errors[0].message);
+});
+
+app.post("/api/office", function(req, res) {
+    console.log(req.body);
+    db.Product.create({
+        id: req.body.id,
+        range: req.body.range,
+        finish: req.body.finish,
+        range: req.body.range,
+        finish: req.body.finish, 
+        material: req.body.materials,
+        location: req.body.location,
+        warehouse: req.body.warehouse,
+        description: req.body.description,
+        status: req.body.status
+    })
+    .catch(function(err) {
+        console.log(err);
+        // res.json(err);
+        res.status(422).json(err.errors[0].message);
+});
