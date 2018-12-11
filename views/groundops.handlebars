@@ -18,7 +18,7 @@
 {{!-- Table for adding new product information --}}
 <div class="container col-md-6 offset-md-3">
   <h2 class="text-center">Insert new batch information</h2>
-  <form>
+  <form class="groundops">
     <div class="form-group">
       <label for="materialInput">Material</label>
       <select class="form-control" id="material">
@@ -46,8 +46,8 @@
       <label for="rangeInput">Range</label>
       <select class="form-control" id="range">
         <option selected>Select range</option>
-        <option>TYPE-2</option>
-        <option>TYPE-3</option>
+        <option>Range-2</option>
+        <option>Range-3</option>
       </select>
     </div>
     <div class="form-group">
@@ -56,7 +56,15 @@
     </div>
     <div class="form-group">
       <label for="locationInput">Location</label>
-      <input type="" class="form-control" id="location" placeholder="Location in Warehouse">
+      <select type="" class="form-control" id="location">
+        <option selected>Select a Location</option>
+        <option>A1</option>
+        <option>A2</option>
+        <option>A3</option>
+        <option>A4</option>
+        <option>A5</option>
+        <option>A6</option>
+      </select>
     </div>
   </form>
 </div>
@@ -75,3 +83,6 @@
 <footer class="page-footer font-small">
   <div class="footer-copyright text-center py-3">© 2018 Copyright: PACER TMS</div>
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/groundops.js"></script>
