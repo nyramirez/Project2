@@ -11,23 +11,19 @@ For *PACER* to work, access to the app has to be granted by the manager of the a
 
 * **Manager Account** - can create other accounts and view status of inventory.
 
-![ManagerScreen]
-(public/Images/Manager Screen.png)
+![Manager Screen](./public/Images/Manager Screen.png)
 
 * **Ground Operations** - can enter information into the database. This account is created to the operator that have direct contact with the material and can make viasual quality verification of material received or shipped.
 
-![ForkliftScreen]
-(public/Images/FL Screen.png)
+![Forklift Screen](./public/Images/FL Screen.png)
 
 * **Office Clerk** - can enter detailed information into the database. The diference between *Office Clerk* and *Forklift Accounts* is the information entered into the database. In the case of the Office Clerk, it is assumed a computer is available.
 
-![OfficeClerk]
-(public/Images/OC Screen.png)
+![Office Clerk](./public/Images/OC Screen.png)
 
 The initial screen for PACER is the loggin screen.
 
-![LoginScreen]
-(public/Images/Login Screen.png)
+![Login Screen](./public/Images/Login Screen.png)
 
 In order to access the app with this screen, an account has to be already in existance. If there is no account please contact your manager or HR representative.
 
@@ -36,18 +32,14 @@ In order to access the app with this screen, an account has to be already in exi
 ### Screen Flow after login
 The next to pictures represent the flow between screens.
 
-![PacerAppFlow1]
-(public/Images/Screen Flow 1.png)
+![PacerApp Flow1](./public/Images/Screen Flow 1.png)
 
-![PacerAppFlow2]
-(public/Images/Screen Flow 2.png)
+![PacerApp Flow2](./public/Images/Screen Flow 2.png)
 
 ### Information Flow on Database
 The next to pictures represent the flow of information from operators to database.
 
-![InformationFlow1]
-(public/Images/Information Flow 1.png)
+![Information Flow1](./public/Images/Information Flow 1.png)
 
-![InformationFlow2]
-(public/Images/Information Flow 2.png)
+![Information Flow2](./public/Images/Information Flow 2.png)
 
