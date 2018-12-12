@@ -20,7 +20,7 @@ $(document).ready(function() {
                 location: location.val().toUpperCase(),
                 warehouse: "",
                 description: "",
-                status: status.val();
+                status: status.val()
             },
             so: {
                 salesOrder: "",

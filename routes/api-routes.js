@@ -86,42 +86,12 @@ module.exports = function(app) {
 
     app.post("/api", function(req, res) {
         console.log(req.body);
-        products: {
-            range: range,
-            finish: finish,
-            location: location,
-            warehouse: warehouse.val(),
-            description: productDescription.val().trim(),
-            status: status
-        },
-        so: {
-            salesOrder: salesOrder.val().trim(),
-            desription: description.val().trim(),
-            material: material.val(),
-            orderQty: qty
-        },
-        po: {
-            purchaseOrder: purchaseOrder.val().trim(),
-            contact: contact.val().trim(),
-            customer: customerName.val().trim()
-        }
-        db.Product.create(req.body.products);
+        console.log(req.body.product);
+        console.log(req.body.so);
+        console.log(req.body.po);
+        /*db.Product.create(req.body.products);
         db.SO.create(req.body.so);
-        db.PO.create(req.body.po);
-        db.PO.create({
-            purchaseOrder: req.body.purchaseOrder,
-            contact: req.body.contact,
-            customer: req.body.customer,
-            status: req.body.status
-        })
-            .then(function() {
-                res.redirect(201);
-            })
-            .catch(function(err) {
-                console.log(err);
-                // res.json(err);
-                res.status(422).json(err.errors[0].message);
-            });
+        db.PO.create(req.body.po);*/
     });
 
     app.get("/api/manager", function(req, res) {
@@ -130,6 +100,7 @@ module.exports = function(app) {
             res.render("manager", hbsObj);
             console.log(hbsObj);
         });
+        res.json({success: "get was successful"});
     });
 
     // db.SO.findAll().then(SOs => console.log(SOs));
