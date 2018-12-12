@@ -125,23 +125,25 @@ module.exports = function(app) {
     });
 
     app.get("/api/manager", function(req, res) {
-        db.Product.findAll().then((Products) => console.log(Products));
-
-        db.SO.findAll().then((SOs) => console.log(SOs));
-
-        db.PO.findAll().then((POs) => console.log(POs));
-
-        // res.json({
-        //     id: db.products.id,
-        //     orderQTY: db.so.orderQty,
-        //     range: db.products.range,
-        //     finish: db.products.finish,
-        //     location: db.products.location,
-        //     warehouse: db.products.warehouse,
-        //     material: db.so.material,
-        //     description: db.products.description,
-        //     status: db.products.status
-        // });
-    
+        db.Product.findAll().then(function(Products) {
+            let hbsObj = { Product: Products };
+            res.render("manager", hbsObj);
+            console.log(hbsObj);
+        });
     });
+
+    // db.SO.findAll().then(SOs => console.log(SOs));
+
+    // db.PO.findAll().then(POs => console.log(POs));
+    // res.json({
+    //     id: db.products.id,
+    //     orderQTY: db.so.orderQty,
+    //     range: db.products.range,
+    //     finish: db.products.finish,
+    //     location: db.products.location,
+    //     warehouse: db.products.warehouse,
+    //     material: db.so.material,
+    //     description: db.products.description,
+    //     status: db.products.status
+    // });
 };
