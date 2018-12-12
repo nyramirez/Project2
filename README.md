@@ -4,17 +4,17 @@
 ## Pacer Transportation Management System.
 
 ### What is PACER TMS ?
-*PACER* is an application that can manage complex inventory system. Its capabilities extend from simple material movemnets to detailed inventory control with unique identifiers for each product. This Version of the application was created with *Pipe Companies in Mind*. The application can be customized and grown to the necesoties of each company.
+*PACER* is an application that can manage complex inventory systems. Its capabilities range from simple material movemnets to detailed inventory control, with unique identifiers for each product. This version of the application was created from the perspective of pipe manufacturer, but application can be customized to fit any type of TMS need. 
 
 ### How it works ...
-In order for *PACER* to work, access to the app has to be granted by the manager of the application. After an account is created,  the manager will be in charge of assign account to each individual that need access to *PACER* with the access right reuired that each individual needs. There are three types of accounts created so far on *PACER*:
+For *PACER* to work, access to the app has to be granted by the manager of the application. After an account is created,  the manager will be in charge of account assignment to each individual that needs access to *PACER*, with the access rights required that each individual needs. There are three types of accounts created so far on *PACER*: ground Operations, office clerk, and manager. 
 
-* **Manager Account** - can create other accounts and read status of inventory.
+* **Manager Account** - can create other accounts and view status of inventory.
 
 ![ManagerScreen]
 (public/Images/Manager Screen.png)
 
-* **Forklift Account** - can enter information into the database. This account is created to the operator that have direct contact with the material and can make viasual quality verification of material received or shipped.
+* **Ground Operations** - can enter information into the database. This account is created to the operator that have direct contact with the material and can make viasual quality verification of material received or shipped.
 
 ![ForkliftScreen]
 (public/Images/FL Screen.png)
