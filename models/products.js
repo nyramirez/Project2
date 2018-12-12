@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                isIn: [["TYPE-2", "TYPE-3"]]
+                isIn: [["RANGE-2", "RANGE-3"]]
             }
         },
         finish: {
