@@ -11,6 +11,7 @@ For *PACER* to work, access to the app has to be granted by the manager of the a
 
 * **Manager Account** - can create other accounts and view status of inventory.
 
+
 ### Manager Screen
 <img width="1428" alt="manager screen" src="https://user-images.githubusercontent.com/39191969/49897134-e8044980-fe1a-11e8-90b0-4026e2d39d9c.png">
 
@@ -29,6 +30,7 @@ The initial screen for PACER is the loggin screen.
 ### Login Screen
 <img width="1430" alt="login screen" src="https://user-images.githubusercontent.com/39191969/49897326-711b8080-fe1b-11e8-9ff8-a5c69269914c.png">
 
+
 In order to access the app with this screen, an account has to be already in existance. If there is no account please contact your manager or HR representative.
 
 **Depending on login credentils the app will route you to the screen that your account has acces granted.**
@@ -36,20 +38,24 @@ In order to access the app with this screen, an account has to be already in exi
 ### Screen Flow after login
 The next to pictures represent the flow between screens.
 
+
 ### Screen Flow 
 <img width="812" alt="screen flow 1" src="https://user-images.githubusercontent.com/39191969/49897384-9c9e6b00-fe1b-11e8-96eb-891f0494da74.png">
 
 ### Screen Flow
 <img width="806" alt="screen flow 2" src="https://user-images.githubusercontent.com/39191969/49897413-b50e8580-fe1b-11e8-88cf-edf025aca917.png">
 
+
 ### Information Flow on Database
 The next to pictures represent the flow of information from operators to database.
+
 
 ### Information Flow 1
 <img width="801" alt="information flow 1" src="https://user-images.githubusercontent.com/39191969/49897454-d1aabd80-fe1b-11e8-96c5-af6cc1ff0177.png">
 
 ### Information Flow 2
 <img width="800" alt="information flow 2" src="https://user-images.githubusercontent.com/39191969/49897487-ec7d3200-fe1b-11e8-805f-9f9389c284b6.png">
+
 
 
 
