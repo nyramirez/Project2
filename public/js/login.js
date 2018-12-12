@@ -4,7 +4,7 @@ $(document).ready(function() {
     let usernameInput = $("input#name-input");
     let passwordInput = $("input#password-input");
 
-    // When the form is submitted, we validate there's an email and password entered
+    // When the form is submitted, we validate there's a username and password entered
     loginForm.on("submit", function(event) {
         event.preventDefault();
         let userData = {
@@ -13,6 +13,8 @@ $(document).ready(function() {
         };
         if (!userData.username || !userData.password) {
             return;
+        } else {
+            $("#loginBtn").text("Success! Logging in");
         }
 
         // If we have an email and password we run the loginUser function and clear the form
