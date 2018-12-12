@@ -36,6 +36,11 @@ module.exports = function(app) {
             });
     });
 
+    app.get("/api/batches", function (req, res){
+        let batchesData = JSON.stringify(batches);
+        res.json(batchesData);
+    });
+
     app.put("/api/batches", function(req, res) {
         batches.push(req.body);
         fs.writeFile(
@@ -79,6 +84,46 @@ module.exports = function(app) {
         }
     });
 
+    app.post("/api", function(req, res) {
+        console.log(req.body);
+        products: {
+            range: range,
+            finish: finish,
+            location: location,
+            warehouse: warehouse.val(),
+            description: productDescription.val().trim(),
+            status: status
+        },
+        so: {
+            salesOrder: salesOrder.val().trim(),
+            desription: description.val().trim(),
+            material: material.val(),
+            orderQty: qty
+        },
+        po: {
+            purchaseOrder: purchaseOrder.val().trim(),
+            contact: contact.val().trim(),
+            customer: customerName.val().trim()
+        }
+        db.Product.create(req.body.products);
+        db.SO.create(req.body.so);
+        db.PO.create(req.body.po);
+        db.PO.create({
+            purchaseOrder: req.body.purchaseOrder,
+            contact: req.body.contact,
+            customer: req.body.customer,
+            status: req.body.status
+        })
+            .then(function() {
+                res.redirect(201);
+            })
+            .catch(function(err) {
+                console.log(err);
+                // res.json(err);
+                res.status(422).json(err.errors[0].message);
+            });
+    });
+
     app.get("/api/manager", function(req, res) {
         db.Product.findAll().then(function(Products) {
             let hbsObj = { Product: Products };
@@ -90,7 +135,6 @@ module.exports = function(app) {
     // db.SO.findAll().then(SOs => console.log(SOs));
 
     // db.PO.findAll().then(POs => console.log(POs));
-
     // res.json({
     //     id: db.products.id,
     //     orderQTY: db.so.orderQty,

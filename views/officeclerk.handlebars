@@ -18,10 +18,9 @@
 <div class="container col-md-6">
   <h2 class="text-center">New batches received</h2>
   {{!-- This table shows previously input information from ground ops --}}
-  <table class="table table-center table-sm table-hover text-center">
+  <table id="table1" class="table table-center table-sm table-hover text-center">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">Material</th>
         <th scope="col">Finish</th>
         <th scope="col">Range</th>
         <th scope="col">Quantity</th>
@@ -29,38 +28,13 @@
         <th scope="col">Status</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <th scope="row">H40</th>
-        <td>P-B</td>
-        <td>RANGE-2</td>
-        <td>70</td>
-        <td>B2</td>
-        <td>Good</td>
-      </tr>
-      <tr>
-        <th scope="row">N80-1</th>
-        <td>P-C</td>
-        <td>RANGE-2</td>
-        <td>80</td>
-        <td>B3</td>
-        <td>Good</td>
-      </tr>
-      <tr>
-        <th scope="row">L80</th>
-        <td>B</td>
-        <td>RANGE-3</td>
-        <td>80</td>
-        <td>B2</td>
-        <td>QC-Inspect</td>
-      </tr>
-    </tbody>
+    <tbody></tbody>
   </table>
 </div>
 <br>
 {{!-- This form adds more information to previous --}}
 <div class="container col-md-6">
-  <form>
+  <form class="office">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="warehouseInput">Warehouse</label>
@@ -94,7 +68,7 @@
       </div>
       <div class="form-group col-md-6">
         <label for="descipInput">Product Description</label>
-        <input type="text" class="form-control" id="description" placeholder="Enter Product Description Here">
+        <input type="text" class="form-control" id="description-po" placeholder="Enter Product Description Here">
       </div>
     </div>
     <div class="form-row">
@@ -111,17 +85,14 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="customerNameInpput">Customer Name</label>
-        <input type="text" class="form-control" id="customerName" placeholder="Enter Customer Name">
+        <input type="text" class="form-control" id="customerName" placeholder="Enter Company Name">
       </div>
       <div class="form-group col-md-6">
-        <label for="lengthInput">Contact Number</label>
-        <input type="text" class="form-control" id="contactNum" placeholder="Enter Number Here">
+        <label for="lengthInput">Contact</label>
+        <input type="text" class="form-control" id="contact" placeholder="Enter Person Name">
       </div>
     </div>
-  </form>
-</div>
-
-{{!-- Submits information to the inventory database --}}
+    {{!-- Submits information to the inventory database --}}
 <div class="container mt-4">
   <div class="row">
     <div class="col-12 text-center">
@@ -129,8 +100,15 @@
     </div>
   </div>
 </div>
+  </form>
+</div>
+
+
 
 <!--Footer-->
 <footer class="page-footer font-small">
   <div class="footer-copyright text-center py-3">© 2018 Copyright: PACER TMS</div>
 </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/office-clerk.js"></script>
