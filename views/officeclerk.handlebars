@@ -21,7 +21,6 @@
   <table id="table1" class="table table-center table-sm table-hover text-center">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">Material</th>
         <th scope="col">Finish</th>
         <th scope="col">Range</th>
         <th scope="col">Quantity</th>
@@ -29,32 +28,7 @@
         <th scope="col">Status</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <th scope="row">H40</th>
-        <td>P-B</td>
-        <td>TYPE-2</td>
-        <td>70</td>
-        <td>B2</td>
-        <td>Good</td>
-      </tr>
-      <tr>
-        <th scope="row">N80-1</th>
-        <td>P-C</td>
-        <td>TYPE-2</td>
-        <td>80</td>
-        <td>B3</td>
-        <td>Good</td>
-      </tr>
-      <tr>
-        <th scope="row">L80</th>
-        <td>B</td>
-        <td>TYPE-3</td>
-        <td>80</td>
-        <td>B2</td>
-        <td>QC-Inspect</td>
-      </tr>
-    </tbody>
+    <tbody></tbody>
   </table>
 </div>
 <br>
@@ -94,7 +68,7 @@
       </div>
       <div class="form-group col-md-6">
         <label for="descipInput">Product Description</label>
-        <input type="text" class="form-control" id="description" placeholder="Enter Product Description Here">
+        <input type="text" class="form-control" id="description-po" placeholder="Enter Product Description Here">
       </div>
     </div>
     <div class="form-row">
@@ -111,11 +85,11 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="customerNameInpput">Customer Name</label>
-        <input type="text" class="form-control" id="customerName" placeholder="Enter Customer Name">
+        <input type="text" class="form-control" id="customerName" placeholder="Enter Company Name">
       </div>
       <div class="form-group col-md-6">
-        <label for="lengthInput">Contact Number</label>
-        <input type="text" class="form-control" id="contactNum" placeholder="Enter Number Here">
+        <label for="lengthInput">Contact</label>
+        <input type="text" class="form-control" id="contact" placeholder="Enter Person Name">
       </div>
     </div>
     {{!-- Submits information to the inventory database --}}

@@ -5,6 +5,7 @@ $(document).ready(function() {
     let pipeRange = $("select#range");
     let batchQty = $("input#quantity");
     let location = $("select#location");
+    let status = $("#status");
 
     // When the signup button is clicked, we validate the email and password are not blank
 
@@ -18,7 +19,7 @@ $(document).ready(function() {
                 location: location.val().toUpperCase(),
                 warehouse: "",
                 description: "",
-                status: ""
+                status: status.val();
             },
             so: {
                 salesOrder: "",
