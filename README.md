@@ -23,7 +23,7 @@ For *PACER* to work, access to the app has to be granted by the manager of the a
 * **Office Clerk** - can enter detailed information into the database. The diference between *Office Clerk* and *Forklift Accounts* is the information entered into the database. In the case of the Office Clerk, it is assumed a computer is available.
 
 ### Office Clerk Screen
-<img width="822" alt="fl screen" src="https://user-images.githubusercontent.com/39191969/49897171-036f5480-fe1b-11e8-955c-4a9541a5cb79.png">
+<img width="767" alt="oc screen" src="https://user-images.githubusercontent.com/39191969/49898300-4da60500-fe1e-11e8-87f2-5202720f15fc.png">
 
 The initial screen for PACER is the loggin screen.
 
