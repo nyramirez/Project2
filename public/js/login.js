@@ -12,9 +12,11 @@ $(document).ready(function() {
             password: passwordInput.val().trim()
         };
         if (!userData.username || !userData.password) {
+            $("#loginError").attr("class", "alert alert-danger");
             return;
         }
-
+        $("#loginError").attr("class", "d-none");
+        // $("#loginError").toggleClass("d-none");
         // If we have an email and password we run the loginUser function and clear the form
         loginUser(userData.username, userData.password);
         usernameInput.val("");
@@ -31,20 +33,20 @@ $(document).ready(function() {
             },
             function(employee) {
                 switch (employee.employeeType) {
-                    case "Manager":
-                        window.location.replace("/manager");
-                        break;
-                    case "Clerk":
-                        window.location.replace("/clerk");
-                        break;
-                     case "Forklift":
-                        window.location.replace("/forklift");
+                case "Manager":
+                    window.location.replace("/manager");
+                    break;
+                case "Clerk":
+                    window.location.replace("/clerk");
+                    break;
+                case "Forklift":
+                    window.location.replace("/forklift");
                         break;
                 }
             },
             "json"
         ).catch(function(err) {
-            console.log(err);
+            console.log(`There was an error: ${err}`);
         });
     }
 });
