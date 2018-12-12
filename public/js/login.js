@@ -12,6 +12,7 @@ $(document).ready(function() {
             password: passwordInput.val().trim()
         };
         if (!userData.username || !userData.password) {
+            $("#loginBtn").text("Log Me In");
             $("#loginError")
                 .text(
                     "Please enter both your username and password in order to login."
@@ -54,11 +55,12 @@ $(document).ready(function() {
         ).catch(function(err) {
             console.log(`There was an error: ${JSON.stringify(err)}`);
             if (err.status === 401) {
+                $("#loginBtn").text("Log Me In");
                 $("#loginError")
                     .text(
                         "The username or password you entered is not recognized. Please check your credentials."
                     )
-                    .attr("class", "alert alert-danger");
+                    .attr("class", "alert alert-danger text-center");
             }
         });
     }
