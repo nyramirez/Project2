@@ -13,7 +13,6 @@ module.exports = function(app) {
         // So we're sending the user back the route to the members page because the redirect will happen on the front end
         // They won't get this or even be able to access this page if they aren't authed
         let employee = req.user.dataValues;
-        // console.log(employee);
         res.json(employee);
     });
 
@@ -156,5 +155,2544 @@ module.exports = function(app) {
                     res.status(422).json(err.errors[0].message);
                 });
         });
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
+=======
+
+    app.get("/api/manager", function(req, res) {
+        db.Product.findAll().then((Products) => console.log(Products));
+
+        db.SO.findAll().then((SOs) => console.log(SOs));
+
+        db.PO.findAll().then((POs) => console.log(POs));
+
+        // res.json({
+        //     id: db.products.id,
+        //     orderQTY: db.so.orderQty,
+        //     range: db.products.range,
+        //     finish: db.products.finish,
+        //     location: db.products.location,
+        //     warehouse: db.products.warehouse,
+        //     material: db.so.material,
+        //     description: db.products.description,
+        //     status: db.products.status
+        // });
+>>>>>>> 5772038d27eb5eb540c1f5b3c41d6188f3d0a29b
     });
 };

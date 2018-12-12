@@ -3,4 +3,8 @@ $(document).ready(function() {
     $.get("/api/user_data").then(function(data) {
         $(".member-name").text(data.username);
     });
+
+    // $.get("/manager").then(function(data) {
+    // $("#inventoryTable").append()
+    // });
 });
