@@ -12,7 +12,7 @@ $(document).ready(function() {
             password: passwordInput.val().trim()
         };
         if (!userData.username || !userData.password) {
-            $("#loginError").attr("class", "alert alert-danger");
+            $("#loginError").attr("class", "alert alert-danger text-center");
             return;
         } else {
             $("#loginBtn").text("Success! Logging in");
@@ -43,7 +43,7 @@ $(document).ready(function() {
                     break;
                 case "Forklift":
                     window.location.replace("/forklift");
-                        break;
+                    break;
                 }
             },
             "json"

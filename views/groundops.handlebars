@@ -46,8 +46,8 @@
       <label for="rangeInput">Range</label>
       <select class="form-control" id="range">
         <option selected>Select range</option>
-        <option>Range-2</option>
-        <option>Range-3</option>
+        <option>RANGE-2</option>
+        <option>RANGE-3</option>
       </select>
     </div>
     <div class="form-group">
@@ -71,9 +71,11 @@
     <div class="container">
       <div class="row">
         <div class="col-12 text-center">
-          <button class="btn btn-large btn-outline-dark">Add</button>
+          <button class="btn btn-large btn-outline-dark" id="addBtn">Add</button>
         </div>
       </div>
+      <br>
+      <p id="addError" class="d-none">Please fill out all the fields before submitting.</p>
 
     </div>
   </form>
