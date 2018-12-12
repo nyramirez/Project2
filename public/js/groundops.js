@@ -1,10 +1,10 @@
 $(document).ready(function() {
     // Getting references to our form and input
     const groundOpsForm = $("form.groundops");
-    const finishKind = $("select#finish");
-    const pipeRange = $("select#range");
-    const batchQty = $("input#quantity");
-    const location = $("select#location");
+    let finishKind = $("select#finish");
+    let pipeRange = $("select#range");
+    let batchQty = $("input#quantity");
+    let location = $("select#location");
 
     // When the signup button is clicked, we validate the email and password are not blank
 

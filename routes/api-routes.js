@@ -37,6 +37,11 @@ module.exports = function(app) {
             });
     });
 
+    app.get("/api/batches", function (req, res){
+        let batchesData = JSON.stringify(batches);
+        res.json(batchesData);
+    });
+
     app.put("/api/batches", function(req, res) {
         batches.push(req.body);
         fs.writeFile(

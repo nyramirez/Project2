@@ -1,73 +1,82 @@
 $(document).ready(function() {
     // Getting references to our form and input
-    const officeClerkForm = $("form.office");
-    const warehouse = $("#warehouse");
-    const status = $("#status");
-    const description = $("#description");
-    const purchaseOrder = $("#purchaseOrder");
-    const salesOrder = $("#salesOrder");
-    const customerName = $("#customerName");
-    const contactNum = $("#contactNum");
+   //const batches = require("../public/batches.json");
+   const officeClerkForm = $("form.office");
+   let warehouse = $("#warehouse");
+   let status = $("#status");
+   let description = $("#description");
+   let purchaseOrder = $("#purchaseOrder");
+   let salesOrder = $("#salesOrder");
+   let customerName = $("#customerName");
+   let contactNum = $("#contactNum"); 
 
     // Does a post to the signup route. If successful, we are redirected to the members page
     // Otherwise we log any errors
-    officeClerkForm.on("submit", function(event) {
-        event.preventDefault();
-        let officeClerkData = {
-            warehouse: warehouseInput.val(),
-            status: statusInput.val(),
-            description: description.val().trim(),
-            purchaseOrder: purchaseOrder.val().toUpperCase(),
-            salesOrder: salesOrder.val().trim().toUpperCase(),
-            customerName: customerName.val().trim().toUpperCase(),
-            contactNum: contactNum.val().trim().toUpperCase()
-        };
-
-        postOffice(
-            officeClerkData.warehouse,
-            officeClerkData.status,
-            officeClerkData.description,
-            officeClerkData.purchaseOrder,
-            officeClerkData.salesOrder,
-            officeClerkData.customerName,
-            officeClerkData.contactNum
-        );
-        warehouseInput.val("");
-        statusInput.val("");
-        descriptionInput.val("");
-        purchaseOrderInput.val("");
-        salesOrderInput.val("");
-        customerNameInput.val("");
-        contactNumInput.val("");
-    });
-
-    //post clerk data
-    function postOffice(
-        warehouse,
-        status,
-        description,
-        purchaseOrder,
-        salesOrder,
-        customerName,
-        contactNum
-    ) {
-        $.post("/api/office", {
-            warehouse: warehouse,
-            status: status,
-            description: description,
-            purchaseOrder: purchaseOrder,
-            salesOrder: salesOrder,
-            customerName: customerName,
-            contactNum: contactNum
+    //Display
+    $.ajax({
+        method: "GET",
+        url: "/api/batches"
+    })
+        .then(function(data) {
+            console.log("inside .then function");
+            let batches = JSON.parse(data);
+            batches.forEach(function(batch) {
+                console.log(batch);
+                console.log(batch.products);
+                let rangeInfo = $("<td>").text(batch.products.range);
+                let finishInfo = $("<td>").text(batch.products.finish);
+                let locationInfo = $("<td>").text(batch.products.location);
+                let qtyInfo = $("<td>").text(batch.so.orderQty);
+                let tableRow = $("<tr>").append(rangeInfo, finishInfo, locationInfo, qtyInfo);
+                $("#table1").append(tableRow);
+            });
         })
-            .then(function() {
-                //Successful reponse redirect
-            })
-            .catch(handleLoginErr);
-    }
+       .catch(function(err) {
+            console.log(JSON.stringify(err));    
+        });
 
-    function handleLoginErr(err) {
-        $("#alert .msg").text(err.responseJSON);
-        $("#alert").fadeIn(500);
-    }
+
+
+        /*officeClerkForm.on("submit", function(event) {
+            event.preventDefault();
+            let officeClerkForm = {
+                products: {
+                    range: pipeRange.val().toUpperCase(),
+                    finish: finishKind.val().toUpperCase(),
+                    location: location.val().toUpperCase(),
+                    warehouse: "",
+                    description: "",
+                    status: ""
+                },
+                so: {
+                    salesOrder: "",
+                    desription: "",
+                    material: "",
+                    orderQty: batchQty.val()
+                },
+                po: {
+                    purchaseOrder: "",
+                    contact: "",
+                    customer: ""
+                }
+            };*/
+
+            /*if (
+                !forkliftData.products.range ||
+                !forkliftData.products.finish ||
+                !forkliftData.products.location ||
+                !forkliftData.so.orderQty
+            ) {
+                console.log("you forgot to fill out one of the fields");
+                return;
+            }
+            // If we have an email and password, run the signUpUser function
+            sendData(forkliftData);
+            groundOpsForm.val("");
+            finishKind.val("");
+            pipeRange.val("");
+            batchQty.val("");
+            location.val("");
+        });*/
 });
+
